@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe6"><meta name="description" content="Elige y reserva uno o varios regalos para Maria Isabella.">
+  <title>Lista de regalos · Maria Isabella</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .registry{width:min(100%,920px);margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 22px 65px #7d60451a}
+    .registry-head{text-align:center;padding:38px 24px 28px;background:linear-gradient(180deg,#fffdf9,#f8f0e7)}
+    .registry-head .bear-art{width:125px}.registry-head h1{font:500 clamp(32px,6vw,46px) 'Playfair Display',serif;color:#86664f;margin:6px 0 10px}.registry-head p{max-width:600px;margin:0 auto;color:#907d6c;font-size:13px;line-height:1.8}
+    .registry-body{padding:24px clamp(15px,4vw,36px) 36px}.registry-toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:20px}.registry-toolbar label{font-size:11px;font-weight:700;color:#8b705a}.registry-toolbar select{margin-left:8px;padding:10px 13px;border:1px solid #e4d3c2;border-radius:20px;background:#fffdfa;color:#765943;font:inherit;max-width:100%}
+    .status{font-size:12px;color:#907d6c;margin:10px 0 18px}.gift-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:14px}.gift-card{border:1px solid var(--line);border-radius:16px;padding:17px;background:#fffdfa;display:flex;flex-direction:column;gap:9px}.gift-card h3{font:500 18px 'Playfair Display',serif;color:#765943;margin:0}.gift-card p{font-size:12px;line-height:1.65;color:#907d6c;margin:0}.gift-meta{font-size:10px;color:#a1846d;font-weight:700;letter-spacing:.4px}.gift-note{font-size:11px!important;color:#a1846d!important}.availability{font-size:11px;font-weight:700;color:#63836c}.availability.sold{color:#a66e68}.gift-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:6px}.gift-actions input{width:72px;padding:8px;border:1px solid #e4d3c2;border-radius:10px;color:#765943;background:white}.add-btn,.reserve-btn{border:0;border-radius:22px;padding:10px 15px;background:#a98266;color:#fffaf5;font-weight:700;font-size:11px;cursor:pointer}.add-btn:disabled{opacity:.4;cursor:not-allowed}.cart{margin-top:28px;padding:22px;border-radius:18px;background:#f8f1e9;border:1px solid #eadfd3}.cart h2{font:500 25px 'Playfair Display',serif;color:#85654f;margin:0 0 12px}.cart-empty{font-size:12px;color:#907d6c}.cart-list{list-style:none;padding:0;margin:0 0 16px}.cart-list li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #eadfd3;font-size:12px;color:#765943}.remove-btn{border:0;background:none;color:#a66e68;text-decoration:underline;cursor:pointer;font:inherit}.reserve-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}.reserve-form label{display:flex;flex-direction:column;gap:6px;font-size:11px;color:#8b705a;font-weight:700}.reserve-form input{padding:11px 12px;border:1px solid #e4d3c2;border-radius:10px;background:#fffdfa;font:inherit;color:#765943}.reserve-form .full{grid-column:1/-1}.reserve-btn{padding:13px 20px;font-size:12px}.reserve-btn:disabled{opacity:.5;cursor:wait}.message{margin-top:12px;font-size:12px;line-height:1.6}.message.error{color:#a34e48}.message.ok{color:#52775c}.back{display:inline-block;margin-top:20px;color:#9b765d;font-weight:700;text-decoration:none;border-bottom:1px solid #d8bca6;padding-bottom:4px;font-size:12px}.footer-note{text-align:center;color:#a18b78;font:italic 13px 'Playfair Display',serif;margin:22px 0 0}
+    @media(max-width:520px){body{padding:0;background:var(--paper)}.registry{border:0;border-radius:0;box-shadow:none}.registry-head{padding-top:28px}.reserve-form{grid-template-columns:1fr}.reserve-form .full{grid-column:auto}}
+  </style>
+</head>
+<body>
+<main class="registry">
+  <header class="registry-head">
+    <div class="bear-art" aria-hidden="true"><svg viewBox="0 0 260 230" xmlns="http://www.w3.org/2000/svg"><ellipse cx="75" cy="45" rx="31" ry="34" fill="#b88d68"/><ellipse cx="185" cy="45" rx="31" ry="34" fill="#b88d68"/><ellipse cx="130" cy="91" rx="74" ry="70" fill="#c49b76"/><ellipse cx="130" cy="112" rx="43" ry="31" fill="#f0dfcb"/><circle cx="105" cy="88" r="5" fill="#554237"/><circle cx="155" cy="88" r="5" fill="#554237"/><ellipse cx="130" cy="105" rx="8" ry="6" fill="#6e4e40"/><ellipse cx="130" cy="177" rx="57" ry="48" fill="#c49b76"/></svg></div>
+    <p class="section-kicker">MARIA ISABELLA</p><h1>Lista de regalitos</h1>
+    <p>Elige uno o varios detalles para nuestra pequeña. La disponibilidad se actualiza cuando alguien realiza una reserva.</p>
+  </header>
+  <section class="registry-body">
+    <div class="registry-toolbar"><label>Filtrar por categoría <select id="categoryFilter"><option value="all">Todas las categorías</option></select></label><span class="gift-meta" id="catalogCount">Cargando catálogo…</span></div>
+    <div id="status" class="status" role="status" aria-live="polite">Conectando con la lista de regalos…</div>
+    <div id="giftGrid" class="gift-grid"></div>
+    <section class="cart" aria-labelledby="cartTitle"><h2 id="cartTitle">Tus regalos seleccionados</h2><div id="cartContent"><p class="cart-empty">Aún no has seleccionado regalos.</p></div>
+      <form id="reserveForm" class="reserve-form">
+        <label>Tu nombre completo<input id="guestName" name="guestName" minlength="2" maxlength="100" autocomplete="name" required placeholder="Nombre y apellido"></label>
+        <label>Contacto (opcional)<input id="guestContact" name="guestContact" maxlength="120" autocomplete="tel" placeholder="Teléfono o correo"></label>
+        <div class="full"><button class="reserve-btn" id="reserveButton" type="submit" disabled>Confirmar mi reserva</button><div id="formMessage" class="message" role="status" aria-live="polite"></div></div>
+      </form>
+    </section>
+    <p class="footer-note">Gracias por acompañarnos y celebrar la llegada de Maria Isabella ♡</p><a class="back" href="index.html">← Volver a la invitación</a>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(() => {
+  // Clave publishable: es pública por diseño. Nunca colocar aquí una secret key.
+  const SUPABASE_URL = 'https://ewonmyghidydajyvievx.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_-Yz0dLlkVV0lMzoSBTeiqA_zNdtVPYi';
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+  const $ = (id) => document.getElementById(id);
+  const state = { items: [], cart: new Map(), categories: [] };
+  const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const setStatus = (message, error=false) => { $('status').textContent=message; $('status').style.color=error?'#a34e48':''; };
+  const selectedTotal = () => [...state.cart.values()].reduce((sum,x)=>sum+x.quantity,0);
+  function renderCategories(){
+    const select=$('categoryFilter');
+    select.innerHTML='<option value="all">Todas las categorías</option>'+state.categories.map(c=>`<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)}</option>`).join('');
+  }
+  function renderItems(){
+    const filter=$('categoryFilter').value;
+    const items=state.items.filter(i=>filter==='all'||i.category_id===filter);
+    $('catalogCount').textContent=`${state.items.length} opciones de regalo`;
+    $('giftGrid').innerHTML=items.map(item=>{
+      const available=Number(item.available_quantity)||0;
+      const inCart=state.cart.get(item.id)?.quantity||0;
+      const max=Math.max(0,available-inCart);
+      return `<article class="gift-card"><div class="gift-meta">${escapeHtml(item.category_name)} · ${escapeHtml(item.variant||'')}</div><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.description)}</p>${item.notes?`<p class="gift-note">${escapeHtml(item.notes)}</p>`:''}<div class="availability ${available===0?'sold':''}">${available===0?'Agotado':`${available} de ${item.target_quantity} disponibles`}</div><div class="gift-actions"><label class="gift-meta">Cantidad <input type="number" min="1" max="${max}" value="1" id="qty-${item.id}" ${max===0?'disabled':''}></label><button class="add-btn" data-add="${item.id}" ${max===0?'disabled':''}>${inCart?'Agregar más':'Seleccionar'}</button></div></article>`;
+    }).join('')||'<p class="cart-empty">No hay regalos en esta categoría.</p>';
+    document.querySelectorAll('[data-add]').forEach(btn=>btn.addEventListener('click',()=>addToCart(btn.dataset.add)));
+  }
+  function addToCart(id){
+    const item=state.items.find(x=>x.id===id); if(!item)return;
+    const input=$(`qty-${id}`); const quantity=Number(input?.value||1); const current=state.cart.get(id)?.quantity||0;
+    if(!Number.isInteger(quantity)||quantity<1||current+quantity>Number(item.available_quantity)){setMessage('La cantidad supera las unidades disponibles.',true);return;}
+    state.cart.set(id,{item,quantity:current+quantity}); renderCart(); renderItems(); setMessage('Regalo agregado a tu selección.');
+  }
+  function removeFromCart(id){state.cart.delete(id);renderCart();renderItems();}
+  function renderCart(){
+    const entries=[...state.cart.entries()];
+    $('reserveButton').disabled=entries.length===0;
+    if(!entries.length){$('cartContent').innerHTML='<p class="cart-empty">Aún no has seleccionado regalos.</p>';return;}
+    $('cartContent').innerHTML='<ul class="cart-list">'+entries.map(([id,x])=>`<li><span>${escapeHtml(x.item.name)} × ${x.quantity}</span><button type="button" class="remove-btn" data-remove="${id}">Quitar</button></li>`).join('')+'</ul><p class="gift-meta">Total de unidades: '+selectedTotal()+'</p>';
+    document.querySelectorAll('[data-remove]').forEach(btn=>btn.addEventListener('click',()=>removeFromCart(btn.dataset.remove)));
+  }
+  function setMessage(message,error=false){$('formMessage').textContent=message;$('formMessage').className='message '+(error?'error':'ok');}
+  async function loadCatalog(){
+    setStatus('Cargando regalos disponibles…');
+    const [{data:items,error:itemError},{data:categories,error:catError}]=await Promise.all([
+      supabase.from('gift_catalog').select('*').order('category_sort_order').order('sort_order'),
+      supabase.from('gift_categories').select('id,name,sort_order').order('sort_order')
+    ]);
+    if(itemError||catError){console.error(itemError||catError);setStatus('No pudimos cargar el catálogo. Verifica la conexión y los permisos de Supabase.',true);return;}
+    state.items=items||[];state.categories=categories||[];renderCategories();renderItems();renderCart();
+    setStatus(state.items.length?`Catálogo conectado correctamente. Hay ${state.items.length} opciones para elegir.`:'El catálogo todavía no tiene regalos activos.',!state.items.length);
+  }
+  $('categoryFilter').addEventListener('change',renderItems);
+  $('reserveForm').addEventListener('submit',async(event)=>{
+    event.preventDefault();
+    const guestName=$('guestName').value.trim(); const guestContact=$('guestContact').value.trim();
+    const entries=[...state.cart.entries()];
+    if(guestName.length<2||!entries.length){setMessage('Escribe tu nombre y selecciona al menos un regalo.',true);return;}
+    $('reserveButton').disabled=true;$('reserveButton').textContent='Procesando reserva…';setMessage('Estamos confirmando la disponibilidad…');
+    const payload=entries.map(([id,x])=>({item_id:id,quantity:x.quantity}));
+    const {data,error}=await supabase.rpc('reserve_gifts',{p_guest_name:guestName,p_guest_contact:guestContact||null,p_items:payload});
+    $('reserveButton').textContent='Confirmar mi reserva';
+    if(error){console.error(error);setMessage(error.message||'No se pudo completar la reserva. Actualiza el catálogo e inténtalo de nuevo.',true);$('reserveButton').disabled=false;await loadCatalog();return;}
+    state.cart.clear();renderCart();$('reserveForm').reset();setMessage('¡Reserva confirmada! Gracias por tu cariño. Guarda este mensaje como confirmación.');await loadCatalog();
+    $('formMessage').className='message ok';$('formMessage').textContent='¡Reserva confirmada! Gracias por tu cariño. Ya registramos tus regalos.';
+  });
+  loadCatalog();
+})();
+</script>
+</body></html>
